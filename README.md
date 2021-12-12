@@ -3,10 +3,10 @@
 ## Credits
 All credits goes to the original authors. I just git-cloned and created a docker-compose file, that's all. 
 
-[LunaSec - log4shell 0-day](https://www.lunasec.io/docs/blog/log4j-zero-day/)
-[@christophetd - log4shell-vulnerable-app](https://github.com/christophetd/log4shell-vulnerable-app)
-[@mbechler - marshalsec](https://github.com/mbechler/marshalsec)
-[@tangxiaofen7 - Exploit.java](https://github.com/tangxiaofeng7/CVE-2021-44228-Apache-Log4j-Rce)
+- [LunaSec - log4shell 0-day](https://www.lunasec.io/docs/blog/log4j-zero-day/)
+- [@christophetd - log4shell-vulnerable-app](https://github.com/christophetd/log4shell-vulnerable-app)
+- [@mbechler - marshalsec](https://github.com/mbechler/marshalsec)
+- [@tangxiaofen7 - Exploit.java](https://github.com/tangxiaofeng7/CVE-2021-44228-Apache-Log4j-Rce)
 
 ## Description 
 This repository contains a docker-compose setup which starts an attacker LDAP server and a victim web server that is vulnerable to log4shell (CVE-2021-44228). 
