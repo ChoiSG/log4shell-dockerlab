@@ -98,7 +98,12 @@ public class Rev {
 
 Compile the second stage. Make sure to target JDK 8, since the `log4shell-vulnerable-app` was built on JDK 8. 
 ```
+// Compile with JDK 8
 javac --release 8 <your-payload>.java 
+
+// Sanity check and make sure it's version 52.0 (jdk 8)
+└─# file Rev.class
+Rev.class: compiled Java class data, version 52.0 (Java 1.8)
 ```
 
 Host the file, and attack again
