@@ -6,8 +6,6 @@ services:
       dockerfile: ./log4shell-vulnerable-app/Dockerfile
     ports:
       - "8080:8080"
-    volumes:
-      - tmp:/tmp
     
   jndi:
     build:
@@ -15,6 +13,3 @@ services:
       dockerfile: ./marshalsec/Dockerfile
     ports:
       - "1389:1389"
-    
-volumes:
-  tmp:
