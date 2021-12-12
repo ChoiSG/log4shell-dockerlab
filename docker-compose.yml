@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  targetweb:
+    build: 
+      context: .
+      dockerfile: ./log4shell-vulnerable-app/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - tmp:/tmp
+    
+  jndi:
+    build:
+      context: .
+      dockerfile: ./marshalsec/Dockerfile
+    ports:
+      - "1389:1389"
+    
+volumes:
+  tmp:
